@@ -1,17 +1,41 @@
-function addNumber(n1: number, n2: number, showResult: boolean, phrase: string) {
-    console.log('type of n1 ', typeof n1);
-    console.log(`type of n2: ${typeof n2}`);
-    if (showResult) {
-        console.log(resultPhrase, n1 + n2);
-    } else {
-        return n1 + n2;
-    }
+// const person: {
+//     name: string;
+//     age: number;
+// } = {
+// const person: {
+//     name: string;
+//     age: number;
+//     hobbies: string[];
+//     // Tuple: special array with two values first as number and second as string
+//     role: [number, string];
+// } = {
+//     name: 'Hoon',
+//     age: 35,
+//     hobbies: ['sports', 'cooking'],
+//     role: [1, 'author']  
+// };
+// const ADMIN = 0;
+// const READ_ONLY = 1;
+// const AUTHOR = 2;
+
+enum ROLE { ADMIN, READ_ONLY, AUTHOR };
+
+const person = {
+    name: 'Hoon',
+    age: 35,
+    hobbies: ['sports', 'cooking'],
+    role: ROLE.ADMIN
+};
+
+// person.role.push('hello');
+// person.role[1] = 'me';
+
+let favoriteActivities: string[];
+favoriteActivities = ['golf', 'soccer'];
+
+console.log(person.name);
+
+for (const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase());
     
 }
-
-const number1 = 5;
-const number2 = 2.6;
-const printResult = true;
-const resultPhrase = "Add result is: ";
-
-addNumber(number1, number2, printResult, resultPhrase);
